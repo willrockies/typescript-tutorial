@@ -1,18 +1,34 @@
-let character = 'Mario';
-let age = 30;
-let isBlackBelt = false;
+//arrays
+let names = ['luigi', 'mario', 'yoshi'];
+names.push('toad');
+//names.push(3);
+//names[0] = 3;
 
-//character = 20;
-character = 'Luigi';
+let numbers = [10, 20, 30, 40];
 
-//age = yoshi;
-age = 20;
+numbers.push(25);
+//numbers.push('wilson');
+//numbers[1] = 'Wilson';
 
-//isBlackBelt = 'yes'
-isBlackBelt = true
+let mixed = ['ken', 4, 'chun-li', 8, 9]
+mixed.push('ryu');
+mixed.push(10);
+mixed[0] = 3
 
-const circ = (diameter:number) => {
-  return diameter * Math.PI;
+//objects
+let ninja = {
+  name: 'mario',
+  belt: 'black',
+  age: 30
 }
 
-console.log(circ(7.5))
+ninja.age = 40;
+ninja.name = 'ryu'
+// ninja.age = '30'
+// ninja.skills = ['fighting', 'sneaking']
+
+ninja = {
+  name: 'yoshi',
+  belt: 'orange',
+  age: 40
+}
