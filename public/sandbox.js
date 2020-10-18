@@ -1,11 +1,24 @@
 "use strict";
-var logDetails = function (uid, item) {
-    console.log(item + " has a uid of " + uid);
+//let greet: Function;
+// example 1
+var greet;
+greet = function (name, greeting) {
+    console.log(name + " says " + greeting);
 };
-var greet = function (user) {
-    console.log(user.name + " says hello");
+greet("wilson", "hello");
+//example 2
+var calc;
+calc = function (numOne, numTwo, action) {
+    if (action === 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 };
-var greetAgain = function (user) {
-    console.log(user.name + " says hello again");
+//example 3
+var logDetails;
+logDetails = function (ninja) {
+    console.log(ninja.name + " is " + ninja.age + " years old");
 };
-// console.log(greetAgain("Wilson", "3"))
+logDetails({ name: "Wilson", age: 32 });
