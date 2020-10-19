@@ -1,15 +1,19 @@
 class Invoice {
-  client: string;
-  details: string;
-  amount: number;
+  // readonly client: string;
+  // private details: string;
+  // public amount: number;
 
-  constructor(c: string, d: string, a: number){
-    this.client = c;
-    this.details = d;
-    this.amount = a;
+  constructor(
+    readonly client: string,
+    private details: string,
+    public amount: number){
+    // this.client = c;
+    // this.details = d;
+    // this.amount = a;
   }
 
   format(){
+    // this.client = 'Browser' // erro pq so pode ser usada como leitura
     return `${this.client}, owes ${this.details}, for ${this.amount}`
   }
 }
@@ -24,8 +28,14 @@ let invoices: Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 
-invOne.client = 'Yoshi';
-invOne.amount = 400;
+// invOne.client = 'Yoshi';
+// invOne.amount = 400;
 
 console.log(invoices);
+
+invoices.forEach(inv => {
+  // console.log(inv.client, inv.details, inv.amount, inv.format());
+  console.log(inv.client,  inv.amount, inv.format());
+  
+})
 
