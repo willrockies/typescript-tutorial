@@ -1,33 +1,27 @@
-"use strict";
-var Invoice = /** @class */ (function () {
-    // readonly client: string;
-    // private details: string;
-    // public amount: number;
-    function Invoice(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-        // this.client = c;
-        // this.details = d;
-        // this.amount = a;
+const me = {
+    name: 'Wilson',
+    age: 31,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
     }
-    Invoice.prototype.format = function () {
-        // this.client = 'Browser' // erro pq so pode ser usada como leitura
-        return this.client + ", owes " + this.details + ", for " + this.amount;
-    };
-    return Invoice;
-}());
-var invOne = new Invoice('Mario', 'Work on mario web site', 300);
-var invTwo = new Invoice('Luigi', 'Work on Luigi website', 350);
-// console.log(invOne);
-// console.log(invTwo);
-var invoices = [];
+};
+const greetPerson = (person) => {
+    console.log(`hello ${person.name}`);
+};
+console.log(me);
+greetPerson(me);
+import { Invoice } from './classes/Invoice.js';
+const invOne = new Invoice('Mario', 'Work on mario web site', 300);
+const invTwo = new Invoice('Luigi', 'Work on Luigi website', 350);
+let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-// invOne.client = 'Yoshi';
-// invOne.amount = 400;
 console.log(invoices);
-invoices.forEach(function (inv) {
+invoices.forEach(inv => {
     // console.log(inv.client, inv.details, inv.amount, inv.format());
     console.log(inv.client, inv.amount, inv.format());
 });
